@@ -7,7 +7,7 @@ const CalendarContainer = ({ companyId }) => {
   useEffect(() => {
     const fetchCompanyData = async () => {
       try {
-        const response = await fetch(`https://calender-backend-iota.vercel.app/api/companies?id=${companyId}`);
+        const response = await fetch(`https://calender-backend-enting.vercel.app/api/companies?id=${companyId}`);
         const data = await response.json();
         setColor(data.color);
       } catch (error) {
