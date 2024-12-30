@@ -1,13 +1,8 @@
 import React from "react";
 import CalendarContainer from "./CalendarContainer";
 
-const App = () => {
-  return (
-    <div className="App">
-      {/* 假设 companyId 为 1 */}
-      <CalendarContainer companyId={1} />
-    </div>
-  );
-};
+function App() {
+  return <CalendarContainer companyId={1} />;
+}
 
 export default App;
