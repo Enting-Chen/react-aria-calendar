@@ -13,7 +13,7 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom/client';  // Use the 'client' entry point
-import './CalendarStyle.css';
+import './CalendarStyles.css';
 import App from './App';
 
 // Create a root element
