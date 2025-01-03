@@ -1,16 +1,3 @@
-// import React from "react";
-// import ReactDOM from "react-dom";
-// import App from "./App";
-// import "./index.css"; // 可选，如果有全局样式
-
-// ReactDOM.render(
-//   <React.StrictMode>
-//     <App />
-//   </React.StrictMode>,
-//   document.getElementById("root")
-// );
-
-
 import React from 'react';
 import ReactDOM from 'react-dom/client';  // Use the 'client' entry point
 import './index.css';

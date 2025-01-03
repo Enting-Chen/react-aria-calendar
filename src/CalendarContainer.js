@@ -9,7 +9,6 @@ const CalendarContainer = ({ companyId }) => {
       try {
         const response = await fetch(`https://calendar-backend-enting.vercel.app/api/companies?id=${companyId}`);
         const data = await response.json();
-        console.log(`Fetched color: ${data.color}`); // 打印后端返回的颜色
         setColor(data.color);
       } catch (error) {
         console.error("Error fetching company data:", error);

@@ -38,7 +38,7 @@ const Calendar = ({ color }) => {
     // You can also provide other optional props here if needed
   });
 
-  // 创建一个空的 props 对象
+  // create an empty props object
   const props = {};
 
   const { calendarProps, prevButtonProps, nextButtonProps, title } = useCalendar(props, state);

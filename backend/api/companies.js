@@ -1,13 +1,11 @@
-// 引入 CORS
 import Cors from "cors";
 
-// 初始化 CORS 配置
+// initialise CORS settings
 const cors = Cors({
-  methods: ["GET"], // 允许的 HTTP 方法
-  origin: "*", // 允许的来源，"*" 表示接受所有来源
+  methods: ["GET"], // allowed HTTP methods
+  origin: "*", // allowed origin，"*" means it accepts all origins
 });
 
-// 用于处理中间件的函数
 function runMiddleware(req, res, fn) {
   return new Promise((resolve, reject) => {
     fn(req, res, (result) => {
@@ -19,7 +17,7 @@ function runMiddleware(req, res, fn) {
   });
 }
 
-// Mock 数据
+// Mock data
 const companies = [
   { id: 1, name: "Company A", color: "#FF5733" },
   { id: 2, name: "Company B", color: "#33FF57" },
@@ -27,10 +25,10 @@ const companies = [
 ];
 
 export default async function handler(req, res) {
-  // 运行 CORS 中间件
+  // run CORS middleware
   await runMiddleware(req, res, cors);
 
-  const { id } = req.query; // 从 URL 中获取公司 ID
+  const { id } = req.query; // get company ID from URL
   const company = companies.find((c) => c.id === parseInt(id));
 
   if (company) {
