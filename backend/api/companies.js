@@ -1,9 +1,9 @@
 import Cors from "cors";
 
-// initialise CORS settings
+// Initialise CORS settings
 const cors = Cors({
-  methods: ["GET"], // allowed HTTP methods
-  origin: "*", // allowed origin，"*" means it accepts all origins
+  methods: ["GET"], // Allowed HTTP methods
+  origin: "*", // Allowed origin, "*" means it accepts all origins
 });
 
 function runMiddleware(req, res, fn) {
@@ -25,11 +25,14 @@ const companies = [
 ];
 
 export default async function handler(req, res) {
-  // run CORS middleware
+  // Run CORS middleware
   await runMiddleware(req, res, cors);
 
-  const { id } = req.query; // get company ID from URL
-  const company = companies.find((c) => c.id === parseInt(id));
+  // Extract company ID from the URL (e.g., /companies/1)
+  const companyId = parseInt(req.url.split("/")[2]);
+
+  // Find company by ID
+  const company = companies.find((c) => c.id === companyId);
 
   if (company) {
     res.status(200).json(company);
