@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, useParams } from 'react-router-dom';
 import CalendarContainer from './CalendarContainer';
 
 function App() {
@@ -13,7 +13,7 @@ function App() {
 }
 
 function CalendarWithCompany({ match }) {
-  const { company } = match.params; 
+  const { company } = useParams();
   return <CalendarContainer companyId={company} />;
 }
 
