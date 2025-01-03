@@ -12,7 +12,7 @@ function App() {
   );
 }
 
-function CalendarWithCompany({ match }) {
+function CalendarWithCompany() {
   const { company } = useParams();
   return <CalendarContainer companyId={company} />;
 }
