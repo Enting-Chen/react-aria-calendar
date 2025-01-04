@@ -1,7 +1,6 @@
 import React from 'react';
 import {parseDate} from '@internationalized/date';
 import { Button, Calendar, CalendarCell, CalendarGrid, Heading } from 'react-aria-components';
-import './index.css';
 
 function CalendarComponent() {
   return (
