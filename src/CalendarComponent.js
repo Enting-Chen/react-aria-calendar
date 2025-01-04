@@ -1,9 +1,18 @@
 import React from 'react';
-import { Button, Calendar, CalendarCell, CalendarGrid, Heading } from 'react-aria-components';
+import {
+  Button,
+  Calendar,
+  CalendarCell,
+  CalendarGrid,
+  Heading,
+  useCalendarState,
+} from 'react-aria-components';
 
 function CalendarComponent() {
+  const state = useCalendarState();
+
   return (
-    <Calendar aria-label="Appointment date">
+    <Calendar aria-label="Appointment date" state={state}>
       <header>
         <Button slot="previous">◀</Button>
         <Heading />
