@@ -6,7 +6,7 @@ function CalendarComponent() {
     <Calendar aria-label="Appointment date">
       <header>
         <Button slot="previous">◀</Button>
-        <Heading style={{ color: 'var(--blue)' }/>
+        <Heading style={{ color: 'var(--blue)' }}/>
         <Button slot="next">▶</Button>
       </header>
       <CalendarGrid>
