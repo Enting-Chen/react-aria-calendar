@@ -4,14 +4,14 @@ import { Button, Calendar, CalendarCell, CalendarGrid, Heading } from 'react-ari
 
 function CalendarComponent() {
   return (
-    <Calendar aria-label="Appointment date" style={{ color: 'var(--blue)' }}>
+    <Calendar aria-label="Appointment date" value={parseDate('2020-02-03')} >
       <header>
-        <Button slot="previous" style={{ color: 'var(--blue)' }}>◀</Button>
-        <Heading style={{ color: 'var(--blue)' }}/>
-        <Button slot="next" style={{ color: 'var(--blue)' }}>▶</Button>
+        <Button slot="previous" >◀</Button>
+        <Heading />
+        <Button slot="next" >▶</Button>
       </header>
       <CalendarGrid>
-        {date => <CalendarCell style={{ color: 'var(--blue)' }}/>}
+        {date => <CalendarCell />}
       </CalendarGrid>
     </Calendar>
   );
