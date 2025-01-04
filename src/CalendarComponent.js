@@ -3,7 +3,7 @@ import { Button, Calendar, CalendarCell, CalendarGrid, Heading } from 'react-ari
 
 function CalendarComponent() {
   return (
-    <Calendar aria-label="Appointment date" isDisabled={false}>
+    <Calendar aria-label="Appointment date" style={{ color: 'var(--blue)' }}>
       <header>
         <Button slot="previous">◀</Button>
         <Heading />
